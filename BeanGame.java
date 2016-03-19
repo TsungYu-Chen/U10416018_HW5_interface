@@ -1,3 +1,6 @@
+
+//U10416018 陳宗佑
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -9,14 +12,16 @@ import javafx.scene.shape.Circle;
 public class BeanGame extends Application{
 	@Override
 	public void start(Stage primaryStage){
+		//Create a scene
 		Scene scene = new Scene(new GamePane(), 500, 500);
 		primaryStage.setTitle("Beangame");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
-	
+	//彈珠檯製作
 	class GamePane extends Pane{
 		public GamePane(){
+			//彈珠檯外框
 			Line lineUp1 = new Line(230, 50, 230, 90);
 			lineUp1.setStrokeWidth(5);
 			lineUp1.setStroke(Color.GREEN);
@@ -52,6 +57,7 @@ public class BeanGame extends Application{
 			lineDown3.setStroke(Color.GREEN);
 			getChildren().add(lineDown3);
 			
+			//彈珠檯內部分隔
 			Line lineM1 = new Line(138, 350, 138, 440);
 			lineM1.setStrokeWidth(5);
 			lineM1.setStroke(Color.BLUE);
@@ -87,7 +93,8 @@ public class BeanGame extends Application{
 			lineM7.setStroke(Color.BLUE);
 			getChildren().add(lineM7);
 			
-			
+			//彈珠檯阻礙
+			//第一層
 			Circle dot1 = new Circle();
 			dot1.setCenterX(250);
 			dot1.setCenterY(110);
@@ -95,7 +102,7 @@ public class BeanGame extends Application{
 			dot1.setStrokeWidth(8);
 			dot1.setStroke(Color.RED);
 			getChildren().add(dot1);
-			
+			//第二層
 			Circle dot2 = new Circle();
 			dot2.setCenterX(232);
 			dot2.setCenterY(150);
@@ -111,7 +118,7 @@ public class BeanGame extends Application{
 			dot3.setStrokeWidth(8);
 			dot3.setStroke(Color.RED);
 			getChildren().add(dot3);
-			
+			//第三層
 			Circle dot4 = new Circle();
 			dot4.setCenterX(213);
 			dot4.setCenterY(190);
@@ -135,7 +142,7 @@ public class BeanGame extends Application{
 			dot6.setStrokeWidth(8);
 			dot6.setStroke(Color.RED);
 			getChildren().add(dot6);
-			
+			//第四層
 			Circle dot7 = new Circle();
 			dot7.setCenterX(194);
 			dot7.setCenterY(230);
@@ -167,7 +174,7 @@ public class BeanGame extends Application{
 			dot10.setStrokeWidth(8);
 			dot10.setStroke(Color.RED);
 			getChildren().add(dot10);
-			
+			//第五層
 			Circle dot11 = new Circle();
 			dot11.setCenterX(175);
 			dot11.setCenterY(270);
@@ -207,7 +214,7 @@ public class BeanGame extends Application{
 			dot15.setStrokeWidth(8);
 			dot15.setStroke(Color.RED);
 			getChildren().add(dot15);
-			
+			//第六層
 			Circle dot16 = new Circle();
 			dot16.setCenterX(157);
 			dot16.setCenterY(310);
@@ -255,7 +262,7 @@ public class BeanGame extends Application{
 			dot21.setStrokeWidth(8);
 			dot21.setStroke(Color.RED);
 			getChildren().add(dot21);
-			
+			//第七層
 			Circle dot22 = new Circle();
 			dot22.setCenterX(138);
 			dot22.setCenterY(350);
